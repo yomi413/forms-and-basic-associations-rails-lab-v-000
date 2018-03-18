@@ -12,10 +12,9 @@
   <%= f.collection_select :genre_id, Genre.all, :id, :name %>
   <br>
 
-  <%= f.label :notes %>
-    <% note_contents.each do |note| %>
-      <%= f.textarea :song[note] %>
-    <% end %>
+  <%= f.label :note %>
+  <%= f.textarea "song[note_contents][]" %>
+
 
 
   <%= f.submit %>
